@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package registration;
+
+service RegistrationService {
+  rpc RegisterStudent(StudentRequest) returns (StudentResponse) {}
+}
+
+message StudentRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message StudentResponse {
+  int32 id = 1;
+}

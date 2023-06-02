@@ -1,0 +1,31 @@
+@host=localhost:3000
+
+### 
+GET http://{{host}}/students
+content-type: application/json
+
+### 
+GET http://{{host}}/students/6474f5b4f34ef277a0018ab8
+content-type: application/json
+
+### 
+POST http://{{host}}/students
+content-type: application/json
+
+{
+    "email" : "abccccc5@gmail.com",
+    "password" : "passwordddddddddd"
+}
+
+### 
+PUT http://{{host}}/students/6474f5b4f34ef277a0018ab8
+content-type: application/json
+
+{
+    "email" : "999999999@gmail.com",
+    "password" : "999999"
+}
+
+### 
+DELETE http://{{host}}/students/6474f5b4f34ef277a0018ab8
+content-type: application/json
