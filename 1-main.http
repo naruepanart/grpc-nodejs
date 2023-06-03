@@ -1,0 +1,30 @@
+@host=localhost:3000
+
+### 
+GET http://{{host}}/
+content-type: application/json
+
+### 
+GET http://{{host}}/6474f5b4f34ef277a0018ab8
+content-type: application/json
+
+### 
+POST http://{{host}}/
+content-type: application/json
+
+{
+    "data" : "abccccc"
+}
+
+### 
+PUT http://{{host}}/6474f5b4f34ef277a0018ab8
+content-type: application/json
+
+{
+    "name" : "abccccc",
+    "age" : 12
+}
+
+### 
+DELETE http://{{host}}/6474f5b4f34ef277a0018ab8
+content-type: application/json

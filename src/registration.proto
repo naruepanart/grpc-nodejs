@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package registration;
+
+service RegistrationService {
+  rpc RegisterUnary(RegisterUnaryRequestResponse) returns (RegisterUnaryRequestResponse) {}
+  rpc RegisterClientStream(stream RegisterClientStreamRequestResponse) returns (RegisterClientStreamResponse) {}
+}
+
+message RegisterUnaryRequestResponse {
+  string name = 1;
+  int32 age = 2;
+}
+
+message RegisterClientStreamRequestResponse {
+  string data = 1;
+}
+
+message RegisterClientStreamResponse {
+  string result = 1;
+}
